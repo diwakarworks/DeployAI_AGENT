@@ -3,12 +3,11 @@ from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
 from agent import run_agent
 import uvicorn
-import os
+
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
-print(os.getenv("GOOGLE_GEMINI_API_KEY"))
 
 # Request model
 class AgentRequest(BaseModel):
